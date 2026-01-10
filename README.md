@@ -39,7 +39,11 @@ $$ Start Tomcat service
 
 
 
+# Docker commands:
+sudo mkdir -p /var/log/vprofile/tomcat
+sudo chown -R 1000:1000 /var/log/vprofile || true
 
+docker run -d --name vprofile   -p 8080:8080   -v /var/log/vprofile/tomcat:/usr/local/tomcat/logs   v:1
 
 
 
