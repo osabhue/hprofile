@@ -23,27 +23,19 @@ sudo yum install -y java-11-amazon-corretto-devel maven git unzip
 java -version
 mvn -version
 git --version
-mvn clean verify
-
-# Clean + run tests + build WAR
-mvn clean package -DskipTests
-
-ls -lh target/
-```bash
-
-# Run locally for testing (Jetty via Maven)
-Option 1:
-  mvn jetty:run
-Option 2:
-  java -jar target/*.war
-## Typical access:
-http://<EC2_PUBLIC_IP>:8080/
+mvn clean package
 
 
 
 
+# Deply war file into Tomcat
 
-
+## Tomcat Installation
+    wget Tomcat from url: https://tomcat.apache.org/download-90.cgi
+## Extract Tomcat
+  tar -xZf <tomcat package>
+## Copy war file into Tomcat document root(webapps)
+$$ Start Tomcat service
 
 
 
