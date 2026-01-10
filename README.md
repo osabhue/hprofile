@@ -32,10 +32,10 @@ ls -lh target/
 ```bash
 
 # Run locally for testing (Jetty via Maven)
-```bash
-mvn jetty:run
-```bash
-
+Option 1:
+  mvn jetty:run
+Option 2:
+  java -jar target/*.war
 ## Typical access:
 http://<EC2_PUBLIC_IP>:8080/
 
